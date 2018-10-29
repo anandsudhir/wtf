@@ -283,6 +283,21 @@
   revision = "36893a66979260e9758701ae306ec0d69c0f53c8"
 
 [[projects]]
+  digest = "1:bc35ac5e7bdb176249a6ed5b44e858740b28454d458bb1a4a350bea2df7b5b14"
+  name = "github.com/sclevine/agouti"
+  packages = [
+    ".",
+    "api",
+    "api/internal/bus",
+    "api/internal/service",
+    "internal/element",
+    "internal/target",
+  ]
+  pruneopts = "UT"
+  revision = "e3f6c97a4077ad821daab49db8172cf9f6690faf"
+  version = "v3.0.0"
+
+[[projects]]
   digest = "1:afee7cbe8cde64304b8bd397d5832b0e60c93f8b158e4102254558d2f862b0a6"
   name = "github.com/shirou/gopsutil"
   packages = [
@@ -454,6 +469,7 @@
     "github.com/pkg/profile",
     "github.com/radovskyb/watcher",
     "github.com/rivo/tview",
+    "github.com/sclevine/agouti",
     "github.com/shirou/gopsutil/cpu",
     "github.com/shirou/gopsutil/mem",
     "github.com/sticreations/spotigopher/spotigopher",

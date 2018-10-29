@@ -47,6 +47,7 @@ import (
 	"github.com/wtfutil/wtf/power"
 	"github.com/wtfutil/wtf/resourceusage"
 	"github.com/wtfutil/wtf/security"
+	"github.com/wtfutil/wtf/servicenow"
 	"github.com/wtfutil/wtf/spotify"
 	"github.com/wtfutil/wtf/spotifyweb"
 	"github.com/wtfutil/wtf/status"
@@ -232,6 +233,8 @@ func addWidget(app *tview.Application, pages *tview.Pages, widgetName string) {
 		widgets = append(widgets, prettyweather.NewWidget(app))
 	case "security":
 		widgets = append(widgets, security.NewWidget(app))
+	case "servicenow":
+		widgets = append(widgets, servicenow.NewWidget(app, pages))
 	case "status":
 		widgets = append(widgets, status.NewWidget(app))
 	case "system":

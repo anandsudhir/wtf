@@ -99,6 +99,10 @@
   name = "github.com/zorkian/go-datadog-api"
 
 [[constraint]]
+  name = "github.com/sclevine/agouti"
+  version = "3.0.0"
+
+[[constraint]]
   branch = "master"
   name = "code.cloudfoundry.org/bytefmt"
 
