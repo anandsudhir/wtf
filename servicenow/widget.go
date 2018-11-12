@@ -84,14 +84,15 @@ func (widget *Widget) contentFrom(changeTasks []ChangeTask) string {
 	}
 
 	var str string
-	str = "[white::b] Task\t\t\tDue date\t\t\tShort description\n"
+	str = "[white::b] Change\t\t\tTask\t\t\tDue date\t\t\tShort description\n"
 	for idx, changeTask := range changeTasks {
 		str = str + fmt.Sprintf(
-			`["%d"][""][%s] [greenyellow]%s`+"\t"+`[%s]%s`+"\t"+`%s`,
+			`["%d"][""][%s] [greenyellow]%s`+"\t"+`[%s]%s`+"\t"+`%s`+"\t"+`%s`,
 			idx,
 			widget.rowColor(idx),
-			changeTask.taskNumber,
+			changeTask.changeNumber,
 			widget.rowColor(idx),
+			changeTask.taskNumber,
 			changeTask.expectedEnd,
 			changeTask.taskDescription,
 		)

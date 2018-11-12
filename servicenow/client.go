@@ -64,6 +64,11 @@ func (widget *Widget) GetChangeTasksAssignedToMe() ([]ChangeTask, error) {
 			return changeTasks, nil
 		}
 
+		changeTask.changeNumber, err = columns[8].GetText()
+		if err != nil {
+			logger.Log(fmt.Sprintf("Failed to get changeNumber: %s", err.Error()))
+			return nil, err
+		}
 		changeTask.taskNumber, err = columns[2].GetText()
 		changeTask.url = baseUrl + changeTaskUrl + changeTask.taskNumber
 		if err != nil {
