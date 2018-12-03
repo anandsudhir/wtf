@@ -6,8 +6,8 @@ import (
 
 	"github.com/sclevine/agouti"
 	"github.com/sclevine/agouti/api"
-	"github.com/senorprogrammer/wtf/logger"
-	"github.com/senorprogrammer/wtf/wtf"
+	"github.com/wtfutil/wtf/logger"
+	"github.com/wtfutil/wtf/wtf"
 )
 
 func (widget *Widget) GetChangeTasksAssignedToMe() ([]ChangeTask, error) {
